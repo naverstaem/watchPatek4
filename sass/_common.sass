@@ -1,0 +1,401 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+//body
+//  font-family: Arial, sans-serif
+//  font-size: 12px
+//  line-height: 1.4
+=pfl
+  font-family: "Conv_PFDinTextCondPro-Light"
+  font-weight: normal
+  font-style: normal
+
+input.error, textarea.error
+  box-shadow: inset 0 0 10px red !important
+label.error
+  display: none !important
+
+
+.icon
+  display: inline-block
+  position: relative
+
+body
+  font-size: 16px
+  line-height: 1.4
+  background: #fff
+  color: #1e1e1e
+  +pfl
+.out
+  position: relative
+input, textarea
+  +placeholder
+    font-size: 16px
+    text-transform: none
+    color: #5a5a5a
+    +pfl
+%in
+  max-width: 1200px
+  width: 1000px
+  margin-left: auto
+  margin-right: auto
+
+.myFancyClose
+  position: absolute
+  top: -17px
+  right: -18px
+
+.btn
+  display: inline-block
+  +border-radius(16px)
+  +background-clip(padding-box)
+  padding: 8px 25px
+  color: #504b41
+  font-size: 18px
+  border: solid 2px #ffffff
+  text-decoration: underline
+  +transition(background, .5s)
+  &:hover
+    color: #504b41
+    background-color: lighten(white, 10%)
+.title
+  font-size: 48px
+  font-family: 'bebas_neuebook'
+  line-height: 1em
+  color: #3c3c3c
+  text-transform: uppercase
+  font-weight: normal
+  position: relative
+  text-align: center
+  span
+    font-size: 48px
+
+
+.counter
+  width: 285px
+  text-align: center
+  display: block
+  margin: -5px auto 25px
+  p
+    color: #ffffff
+    margin-bottom: 5px
+    margin-top: 3px
+    font-size: 14px
+    position: static
+    font-family: 'conv_pfdintextcondpro-light'
+    &.counter__title
+      font-family: 'conv_segoeprintregular'
+
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+
+    li
+      float: left
+      margin: 0 10px
+      text-align: center
+      position: relative
+
+      span
+        position: relative
+        background: none
+        +text-shadow(1px 1px 1px rgb(0, 0, 0))
+        display: block
+        font-size: 36px
+        width: 50px
+        height: 60px
+        border: solid 2px #ffffff
+        +border-radius(4px)
+        +box
+        padding-top: 3px
+        padding-right: 2px
+        font-family: 'conv_pfdintextcondpro-thin'
+        color: #ffffff
+
+
+
+.form__out
+  width: 420px
+  +border-radius(8px)
+  +background-clip(padding-box)
+  border: solid 10px rgba(#bd3b63, .5)
+  +box
+
+.form
+  width: 380px
+  //height: 510px
+  position: relative
+  +box
+  padding-bottom: 0
+  margin: 10px
+
+  .caption
+    box-sizing: border-box
+    padding-top: 25px
+    text-align: center
+    background: url(../img/form-caption_bg.png) no-repeat
+    width: 380px
+    height: 130px
+    h3
+      margin-top: 0
+      margin-bottom: 0
+      font-size: 24px
+      font-weight: normal
+      text-align: center
+      font-family: 'Conv_PFDinTextCondPro-Light'
+      color: #ffffff
+      text-transform: none
+      line-height: 1em
+    h4
+      margin-top: 5px
+      margin-bottom: 28px
+      font-size: 60px
+      text-align: center
+      font-weight: normal
+      text-transform: uppercase
+      font-family: 'bebas_neuebold'
+      color: #ffffff
+      line-height: 1em
+
+
+.frm
+  //height: 305px
+  background: #ffffff
+  position: relative
+  height: 430px
+  .form-price
+    font-family: 'bebas_neuebook'
+    font-size: 48px
+    text-align: center
+    position: relative
+    padding-top: 10px
+    &:before
+      position: absolute
+      content: ""
+      width: 80px
+      height: 0px
+      border-bottom: 2px solid #e5e5e5
+      top: 44px
+      left: 42px
+    &:after
+      position: absolute
+      content: ""
+      width: 80px
+      height: 0px
+      border-bottom: 2px solid #e5e5e5
+      top: 44px
+      right: 42px
+
+    span
+      font-size: 24px
+      font-family: 'als_rublregular'
+
+
+
+
+form
+  margin-top: 10px
+  position: relative
+  text-align: center
+  input
+    padding-left: 20px
+    width: 220px
+    height: 50px
+    display: block
+    margin: auto auto 10px
+    +box
+    font-size: 18px
+    +border-radius(4px)
+    +background-clip(padding-box)
+    background: #efefef
+    border: 2px solid #e5e5e5
+
+
+
+
+.form__bottom
+  text-align: center
+  font-family: 'conv_pfdintextcondpro-light'
+  font-size: 16px
+  color: #3c3c3c
+  margin-top: 8px
+  line-height: 1.2em
+  span
+    font-family: 'conv_pfdintextcondpro-regular'
+    font-size: 24px
+
+.button
+  +box
+  width: 240px
+  height: 70px
+  color: #ffffff
+  +single-text-shadow
+  display: block
+  margin: 20px auto auto
+  font-family: 'pf_highway_sans_probold'
+  font-size: 30px
+  text-transform: none
+  text-decoration: none
+  +border-radius(4px)
+  +background-clip(padding-box)
+  border: solid 2px #ffffff
+  background: none
+  letter-spacing: 1px
+
+  &:hover
+    +box-shadow(inset 0 0 5px 2px #ffffff)
+// common blocks
+
+
+.button
+  +box
+  background: transparent
+  width: 260px
+  height: 90px
+  color: #d2b978
+  +single-text-shadow
+  display: block
+  margin: 20px auto auto
+  font-family: 'code_pro_lcregular'
+  font-size: 24px
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: 1px
+
+  &:hover
+    +box-shadow(inset 0 0 5px 2px #d2b978)
+// common blocks
+.button--yellow
+  +border-radius(4px)
+  +background-clip(padding-box)
+  color: #000
+  font-family: 'pf_highway_sans_probold'
+  font-size: 30px
+  font-weight: normal
+  display: inline-block
+  margin: 20px auto auto
+  text-decoration: none
+  padding: 17px 61px
+  +box-shadow(inset 0 -4px 0 rgba(200,180,70,.6))
+  +background-image(linear-gradient(to bottom, #ffef00 0%, #ffdb4f 100%))
+
+  &:hover
+    background: lighten(#ffef00, 10%)
+    +box-shadow(0 0 0 0)
+
+.button--orange
+  @extend .button--yellow
+  +box-shadow(inset 0 -4px 0 rgb(192,91,0))
+  +background-image(linear-gradient(bottom, #db6d00 0%, #ffc73b 100%))
+  color: white
+  padding: 14px 41px
+  &:hover
+    background: lighten(#db6d00, 10%)
+    +box-shadow(0 0 0 0)
+
+
+.radio-toolbar
+  position: relative
+  margin: 0 auto 20px
+  text-align: center
+  p
+    text-align: center
+    margin-bottom: 15px
+    +pfl
+    font-size: 18px
+    text-transform: none
+  label
+    margin-left: 20px
+    &:first-of-type
+      margin-left: 0
+  input[type='radio']
+    display: none
+  .input--first
+    position: relative
+    display: inline-block
+    width: 100px
+    height: 50px
+    @include border-radius(4px)
+    @include background-clip(padding-box)
+    border: solid 2px #e5e5e5
+    background: #ffffff
+    +box
+    +pfl
+    font-size: 18px
+    padding-top: 12px
+    &:hover
+      cursor: pointer
+    &:before
+      position: absolute
+      content: ""
+      +s(check)
+      top: 15px
+      left: -30px
+      opacity: 0
+      visibility: hidden
+      +transition(all .5s)
+
+
+  .input--second
+    background: #1d1d1d
+    border: solid 2px #1d1d1d
+    color: #ffffff
+    &:before
+      left: auto
+      right: -30px
+
+  input[type='radio']:checked + label
+    > span
+      &:before
+        opacity: 1
+        visibility: visible

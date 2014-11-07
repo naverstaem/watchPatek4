@@ -1,0 +1,788 @@
+// Normally mainpage styles 
+//+font('Conv_SegoePrintRegular', 'SegoePrintRegular')
+
+.top
+  background: transparent
+  +background-size(cover)
+  height: 130px
+  .top_in
+    @extend %in
+    +clr
+    position: relative
+    padding-top: 50px
+
+  nav
+    float: left
+
+    ul
+      font-size: 16px
+      padding: 0
+      li
+        display: inline-block
+        float: left
+        margin-right: 16px
+        font-family: 'conv_pfdintextcondpro-light'
+        border-right: solid 1px
+        color: #ffffff
+        line-height: 1em
+        padding-right: 20px
+        &:last-child
+          border: none
+        a
+          text-decoration: none
+          color: inherit
+          border-bottom: solid 1px
+          &:hover
+            border-bottom: solid 3px
+          &.is-active
+            border-bottom: solid 3px
+
+  .top__right
+    float: right
+    margin-top: -10px
+  .top__after-phone
+    vertical-align: middle
+  .top__phone
+    +clr
+    font-size: 36px
+    color: #ffffff
+    margin: 0
+    font-family: 'conv_pfdintextcondpro-light'
+    line-height: .9em
+    font-weight: normal
+    display: inline-block
+    vertical-align: middle
+    span
+      font-family: 'conv_pfdintextcondpro-medium'
+      font-size: 36px
+  .nomenclature
+    margin: 0 16px
+    color: white
+    font-size: 16px
+    font-family: 'conv_pfdintextcondpro-lightital'
+    display: inline-block
+  .callme
+    display: inline-block
+    font-family: 'conv_pfdintextcondpro-light'
+    font-size: 18px
+    text-transform: none
+    text-decoration: underline
+    color: #ffffff
+    &:hover
+      text-decoration: none
+
+
+header
+  background: url(../img/header_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 900px
+  position: relative
+  +box
+
+  h1
+    font-size: 72px
+    color: #ffffff
+    font-family: 'bebas_neuebold'
+    line-height: 1.1em
+    text-transform: uppercase
+    font-weight: normal
+    text-align: center
+
+  h2
+    font-family: 'conv_pfdintextcondpro-thin'
+    font-size: 36px
+    font-weight: normal
+    color: #ffffff
+    text-transform: none
+    text-align: center
+    padding-top: 15px
+
+
+  .header_in
+    @extend %in
+    +clr
+    position: relative
+
+    .watch
+      position: relative
+      background: url(../img/header_watch.png) no-repeat
+      width: 530px
+      height: 555px
+      z-index: 1
+      float: left
+      margin-top: 65px
+      +clr
+
+
+
+
+
+    .header__right
+      position: relative
+      float: right
+      z-index: 1
+      +clr
+      margin-top: 20px
+
+.hit
+  text-align: center
+  position: absolute
+  width: 180px
+  height: 180px
+  +box
+  top: 160px
+  left: 360px
+  color: #ffffff
+  font-weight: normal
+  +border-radius(50%)
+  +background-clip(padding-box)
+  +background-image(linear-gradient(to left, #f97d59 0%, #95231d 50%, #c73b59 100%))
+  z-index: 2
+  .hit-inner
+    position: absolute
+    border: solid 4px rgba(#96231e, .6)
+    +border-radius(50%)
+    +background-clip(padding-box)
+    background: transparent
+    width: 160px
+    height: 160px
+    top: 50%
+    left: 50%
+    +transform(translate(-50%,-50%))
+    padding-top: 40px
+    line-height: .7em
+    +box
+    font-family: 'bebas_neuebold'
+    font-size: 48px
+    span
+      font-size: 36px
+      font-family: 'bebas_neuebook'
+
+.scrollMenu
+  //@extend header
+  @extend .top
+  .top_in
+    padding-top: 20px
+  position: fixed
+  z-index: 999
+  width: 100%
+  top: 0
+  left: 0
+  bottom: auto
+  display: none
+  height: 60px
+  +box
+  background: rgba(40,40,40, 0.8)
+  .top
+    height: 0
+
+.features
+  +clr
+  padding-top: 50px
+  padding-bottom: 30px
+  h2
+    margin-bottom: 40px
+  .features_in
+    @extend %in
+    width: 842px
+    +clr
+  .features__item
+    width: 180px
+    text-align: center
+    vertical-align: top
+    margin-right: 35px
+    display: inline-block
+    &:last-child
+      margin-right: 0
+    .features__img
+      width: 180px
+      height: 180px
+      +border-radius(50%)
+      border: solid 2px #e5e5e5
+      .vertical-centered
+        vertical-align: middle
+        display: inline-block
+        height: 100%
+
+      img
+        display: inline-block
+        vertical-align: middle
+
+
+    h3
+      font-family: 'conv_pfdintextcondpro-thin'
+      font-size: 36px
+      font-weight: normal
+    p
+      +pfl
+      font-size: 18px
+
+.charact
+  +clr
+  background: url(../img/charact_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 860px
+  padding-top: 80px
+  +box
+  h2
+    margin-bottom: 30px
+  .charact_in
+    @extend %in
+    position: relative
+    +clr
+  .charact__left
+    position: relative
+    float: left
+    .hit--charact
+      top: 180px
+      .hit-inner--charact
+        padding-top: 60px
+  .charact__right
+    float: right
+    width: 420px
+    .charact__items
+      background: white
+      padding: 30px 40px
+      +box
+      +border-radius(8px)
+      li
+        position: relative
+        margin-left: 60px
+        +pfl
+        font-size: 24px
+        line-height: 2.5em
+        &:before
+          position: absolute
+          content: ""
+          +s(check2)
+          top: 10px
+          left: -60px
+    .form-price
+      font-family: 'bebas_neuebook'
+      font-size: 48px
+      text-align: center
+      position: relative
+      padding-top: 10px
+      &:before
+        position: absolute
+        content: ""
+        width: 80px
+        height: 0px
+        border-bottom: 2px solid #ffffff
+        top: 44px
+        left: 62px
+      &:after
+        position: absolute
+        content: ""
+        width: 80px
+        height: 0px
+        border-bottom: 2px solid #ffffff
+        top: 44px
+        right: 62px
+
+      span
+        font-size: 24px
+        font-family: 'als_rublregular'
+    .charact__bottom
+      margin-top: 10px
+      .charact__remain
+        display: inline-block
+        text-align: center
+        vertical-align: middle
+        p
+          margin-bottom: 3px
+        span
+          display: inline-block
+          position: relative
+          background: none
+          +text-shadow(1px 1px 1px rgb(0, 0, 0))
+          font-size: 48px
+          width: 60px
+          height: 70px
+          +border-radius(4px)
+          +box
+          padding-top: 2px
+          padding-right: 2px
+          font-family: 'bebas_neuebook'
+          color: #ffffff
+          +box-shadow(inset 0 -2px 0 rgba(0,0,0,.8))
+          +background-image(linear-gradient(to bottom, #595959 0%, #b3b3b3 40%, #131313 65.01%, #595959 100%))
+          margin: 0 3px
+          &:after
+            height: 4px
+            width: 100%
+            position: absolute
+            content: ""
+            top: 33px
+            left: 0
+            +background-image(linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(#000,0.5) 100%))
+
+      .charact__buy
+        display: inline-block
+        vertical-align: middle
+        margin-left: 30px
+
+
+
+
+
+.specs
+  padding-top: 45px
+  +clr
+  +box
+  h2
+    margin-bottom: 50px
+    font-size: 60px
+    font-family: 'code_pro_lightregular'
+    font-weight: normal
+    text-align: center
+  .specs_in
+    @extend %in
+    width: 960px
+    +clr
+  &__top
+    +border-radius(12px 12px 0)
+    +background-clip(padding-box)
+    +background-image(linear-gradient(to bottom, #efefef 0%, #dbdbdb 100%))
+    position: relative
+    padding: 35px
+    &:after
+      content: ""
+      position: absolute
+      background: url(../img/shadow.png) no-repeat center
+      width: 800px
+      height: 20px
+      bottom: -20px
+      left: 50%
+      +transform(translateX(-50%))
+    p
+      margin-bottom: 25px
+      width: 510px
+      &:last-of-type
+        margin-bottom: 0
+    .specs__watch
+      position: absolute
+      bottom: 0
+      right: 10px
+      img
+        display: block
+    .specs__video
+      position: absolute
+      bottom: 0
+      right: 0
+      +border-radius(8px 0 0 0)
+      +background-clip(padding-box)
+      +box-shadow(inset 0 -4px 0 rgba(200,180,70,.6))
+      +background-image(linear-gradient(to bottom, #ffef00 0%, #ffdb4f 100%))
+      font-size: 24px
+      color: #281e1e
+      text-decoration: underline
+      width: 280px
+      height: 70px
+      padding-left: 40px
+      +box
+
+      i
+        display: inline-block
+        position: relative
+        top: 16px
+        left: -20px
+        +s(play)
+      &:hover
+        text-decoration: none
+
+  &__items-wrapper
+    float: left
+    margin-left: 35px
+    margin-top: -9px
+    +clr
+  &__items
+    float: left
+    font-size: 16px
+    margin-right: 0
+    +box
+    +clr
+    &.short
+      margin-right: 100px
+      .specs__item
+        &.title
+          margin-bottom: 28px
+
+
+
+
+  &__item
+    color: #5a5a5a
+    margin-top: 24px
+    font-family: 'conv_pfdintextcondpro-light'
+    font-size: 16px
+    &:first-child
+      margin-top: 0
+    &.title
+      font-family: 'gotham_proregular'
+      color: #8c0a0a
+      font-size: 18px
+
+    span
+      color: #1e1e1e
+      font-size: 18px
+      text-transform: none
+
+  &__bottom
+    margin-top: 40px
+  &__images
+    margin-top: -20px
+    position: relative
+    float: left
+    width: 440px
+    .photo__item
+      width: 210px
+      height: 190px
+      margin-top: 15px
+      position: relative
+      display: inline-block
+      +border-radius(6px)
+      &:nth-child(2n+2)
+        margin-left: 15px
+      img
+        display: block
+        +border-radius(6px)
+      span
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        +opacity(0)
+        z-index: 1
+        +border-radius(6px)
+        background: rgba(#fff, .6)
+        &:after
+          content: ""
+          position: absolute
+          +s(zoom)
+          top: 50%
+          left: 50%
+          +transform(translate(-50%,-50%))
+        &:hover
+          +opacity(1)
+
+
+.our
+  background: url(../img/our_bg.jpg) center no-repeat
+  +background-size(cover)
+  height: 790px
+  padding-top: 65px
+  position: relative
+  +clr
+  +box
+  h3
+    font-weight: normal
+    color: #1e1e1e
+    font-size: 36px
+    font-family: 'conv_pfdintextcondpro-thin'
+    text-align: center
+    line-height: 1em
+    text-transform: none
+  h2
+    color: #1e1e1e
+    font-family: 'bebas_neuebold'
+    font-size: 72px
+    text-align: center
+    font-weight: normal
+    line-height: 1.2em
+
+  .our_in
+    @extend %in
+    position: relative
+    +clr
+
+  .russia
+    position: relative
+    background: url(../img/russia.png) center center no-repeat
+    width: 860px
+    height: 515px
+    margin: -105px auto 0
+  &__delivery
+    width: 170px
+    color: #ffffff
+    font-family: 'conv_pfdintextcondpro-regular'
+    font-size: 18px
+    position: absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+    margin-top: 60px
+    margin-left: 153px
+    &:before
+      position: absolute
+      content: ""
+      +s(pin_ico)
+      top: -73px
+      left: -132px
+  &__bottom
+    width: 600px
+    margin: 55px auto 0
+    position: relative
+    margin-left: 448px
+  &__price
+    width: 180px
+    display: inline-block
+    position: relative
+    margin-right: 170px
+    margin-left: 50px
+    color: #ffffff
+    font-size: 18px
+    font-family: 'conv_pfdintextcondpro-regular'
+    &:before
+      position: absolute
+      top: -8px
+      left: -75px
+      content: ""
+      +s(price_ico)
+  &__support
+    width: 190px
+    display: inline-block
+    position: relative
+    font-size: 18px
+    color: #ffffff
+    font-family: 'conv_pfdintextcondpro-regular'
+    &:before
+      position: absolute
+      top: -5px
+      left: -75px
+      content: ""
+      +s(bubble_ico)
+  &__girl
+    position: absolute
+    bottom: -88px
+    left: -108px
+    img
+      display: block
+
+
+.reviews
+  +clr
+  padding-bottom: 60px
+  padding-top: 60px
+  h2
+    margin-bottom: 35px
+    text-align: center
+  .reviews_in
+    @extend %in
+    +clr
+  .row
+    margin-top: 55px
+    &:first-child
+      margin-top: 0
+  .review__item
+    +background-clip(padding-box)
+    width: 280px
+    position: relative
+    display: inline-block
+    margin-right: 75px
+    vertical-align: top
+    text-align: left
+    +box
+    +clr
+    &:last-child
+      margin-right: 0
+    .review__img
+      display: inline-block
+      width: 80px
+      height: 80px
+      +border-radius(50%)
+      margin-right: 15px
+      vertical-align: middle
+    .review__head
+      text-align: center
+      display: inline-block
+      vertical-align: top
+
+    .review__name
+      color: #ffffff
+      width: 180px
+      height: 50px
+      font-size: 24px
+      position: relative
+      background: #9fbd31
+      padding-top: 8px
+      +box
+
+      &:after
+        position: absolute
+        top: 44px
+        left: 11px
+        +s(review_popup1)
+        content: ""
+    .rewview__name--blue
+      background: #81b3db
+      &:after
+        +s(review_popup2)
+
+    .review__video-r
+      margin-top: 10px
+      color: #a0be32
+      display: inline-block
+      font-size: 18px
+    .review__video
+      +border-radius(6px)
+      width: 280px
+      height: 160px
+      position: relative
+      margin-top: 10px
+      &:after
+        position: absolute
+        top: 50%
+        left: 50%
+        +transform(translate(-50%,-50%))
+        +s(play2)
+        content: ""
+      &:hover
+        +opacity(.8)
+    .review__text
+      font-size: 16px
+      color: #1e1e1e
+      text-align: left
+      margin-top: 10px
+    .review__audio
+      text-decoration: underline
+      +pfl
+      font-size: 18px
+      color: #82b4dc
+      margin-left: 10px
+      margin-top: 15px
+      display: inline-block
+      &:hover
+        text-decoration: none
+      i
+        display: inline-block
+        vertical-align: middle
+        left: -10px
+        position: relative
+        +s(listen)
+
+
+.order
+  margin-top: 0
+  padding-bottom: 60px
+  .order_in
+    @extend %in
+    width: 1010px
+  h2
+    margin-bottom: 35px
+    text-align: center
+  &__item
+    vertical-align: top
+    width: 320px
+    height: 510px
+    text-align: center
+    padding-top: 25px
+    display: inline-block
+    margin-right: 18px
+    border: solid 5px rgb(230, 230, 230)
+    background: #ffffff
+    +box
+    &:last-child
+      margin-right: 0
+  &__caption
+    font-size: 24px
+    font-family: 'conv_pfdintextcondpro-light'
+    margin-bottom: 10px
+    color: #281e1e
+    text-transform: none
+  &__img
+    display: inline-block
+    width: 290px
+    height: 195px
+    img
+      display: block
+  &__bottom
+    margin-top: 35px
+  &__price
+    +box
+    line-height: 1.4em
+    text-align: left
+    display: inline-block
+    vertical-align: middle
+    margin-top: 8px
+    h3
+      font-family: 'conv_pfdintextcondpro-thin'
+      font-size: 48px
+      font-weight: normal
+      color: #1e1e1e
+      vertical-align: middle
+      span
+        font-family: 'als_rublregular'
+        font-size: 24px
+    h4
+      display: inline-block
+      font-size: 18px
+      color: #5a5a5a
+  &__text
+    padding: 20px 15px 0
+    font-size: 18px
+    color: #787878
+    text-align: center
+    margin-bottom: 5px
+  &__more
+    color: #dc500f
+    font-size: 18px
+    &:hover
+      text-decoration: none
+
+  &__form
+    display: inline-block
+    vertical-align: middle
+    margin-left: 25px
+    form
+      margin: 0
+      input
+      button
+        font-size: 24px
+        margin-top: 0
+        padding: 15px 21px
+
+
+
+.bottom
+  @extend header
+  padding-top: 35px
+  .header_in--bottom
+    margin-top: 0px !important
+
+.questions
+  text-align: center
+  padding: 40px 0
+  .button--questions
+    display: inline-block
+    text-align: center
+    +pfl
+    font-size: 24px
+    text-decoration: underline
+    +border-radius(4px)
+    border: solid 2px #fadc28
+    padding: 17px 61px
+    color: #1e1e1e
+    margin-top: 15px
+    &:hover
+      text-decoration: none
+
+
+footer
+  box-sizing: border-box
+  background: url(../img/footer_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 100px
+  .footer_in
+    @extend %in
+  text-align: center
+  padding-top: 16px
+  p
+    font-size: 16px
+    color: #787878
+    a
+      color: #963269
+      &:hover
+        text-decoration: none
+
