@@ -148,6 +148,17 @@ head.ready(function() {
 
 
 
+    $(".timer").TimeCircles({
+        bg_width: 1.05,
+        text_size: 0.085,
+        circle_bg_color: "#ddebf3",
+        time: {
+        Days: { show: false},
+        Hours: { color: "#2d2d2d", text: "Часов" },
+        Minutes: { color: "#2d2d2d", text: "Минут" },
+        Seconds: { color: "#2d2d2d", text: "Секунд" }
+    }});
+
 
 
     (function ($) {

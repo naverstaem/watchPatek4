@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(../css/TimeCircles.css);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, .bottom, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -46,24 +47,19 @@ input::placeholder, textarea::placeholder { font-size: 16px; text-transform: non
 .title span { font-size: 48px; }
 
 .counter { width: 285px; text-align: center; display: block; margin: -5px auto 25px; }
-.counter p { color: #ffffff; margin-bottom: 5px; margin-top: 3px; font-size: 14px; position: static; font-family: "conv_pfdintextcondpro-light"; }
-.counter p.counter__title { font-family: "conv_segoeprintregular"; }
+.counter p { color: #ffffff; margin-bottom: -10px; margin-top: 3px; font-size: 14px; position: static; font-family: "conv_pfdintextcondpro-light"; }
+.counter p.counter__title { font-family: "conv_pfdintextcondpro-light"; font-size: 24px; }
 .counter ul { list-style: none; margin: 0; padding: 0; display: inline-block; }
-.counter ul li { float: left; margin: 0 10px; text-align: center; position: relative; }
+.counter ul li { float: left; margin: 0 4px; text-align: center; position: relative; }
 .counter ul li span { position: relative; background: none; text-shadow: 1px 1px 1px black; display: block; font-size: 36px; width: 50px; height: 60px; border: solid 2px #ffffff; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: 3px; padding-right: 2px; font-family: "conv_pfdintextcondpro-thin"; color: #ffffff; }
 
-.form__out { width: 420px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; border: solid 10px rgba(189, 59, 99, 0.5); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.form { background: url(../img/form_bg.png) no-repeat center; height: 480px; width: 400px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.form .caption { box-sizing: border-box; padding-top: 20px; text-align: center; background: none; width: 400px; height: 120px; }
+.form .caption h3 { margin-top: 0; margin-bottom: 0; font-size: 36px; font-weight: normal; text-align: center; font-family: "Conv_PFDinTextCondPro-regular"; color: #ffffff; text-transform: uppercase; line-height: 1em; }
+.form .caption h4 { margin-top: 5px; margin-bottom: 0; font-size: 36px; text-align: center; font-weight: normal; text-transform: none; font-family: "conv_pfdintextcondpro-light"; color: #ffffff; line-height: 1em; }
+.form .caption h4 span { font-family: "conv_pfdintextcondpro-regular"; }
 
-.form { width: 400px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 0; margin: 10px; }
-.form .caption { box-sizing: border-box; padding-top: 25px; text-align: center; background: url(../img/form-caption_bg.png) no-repeat; width: 380px; height: 130px; }
-.form .caption h3 { margin-top: 0; margin-bottom: 0; font-size: 24px; font-weight: normal; text-align: center; font-family: "Conv_PFDinTextCondPro-Light"; color: #ffffff; text-transform: none; line-height: 1em; }
-.form .caption h4 { margin-top: 5px; margin-bottom: 28px; font-size: 60px; text-align: center; font-weight: normal; text-transform: uppercase; font-family: "bebas_neuebold"; color: #ffffff; line-height: 1em; }
-
-.frm { background: #ffffff; position: relative; height: 430px; }
-.frm .form-price { font-family: "bebas_neuebook"; font-size: 48px; text-align: center; position: relative; padding-top: 10px; }
-.frm .form-price:before { position: absolute; content: ""; width: 80px; height: 0px; border-bottom: 2px solid #e5e5e5; top: 44px; left: 42px; }
-.frm .form-price:after { position: absolute; content: ""; width: 80px; height: 0px; border-bottom: 2px solid #e5e5e5; top: 44px; right: 42px; }
-.frm .form-price span { font-size: 24px; font-family: "als_rublregular"; }
+.frm { background: none; position: relative; height: 430px; }
 
 form { margin-top: 10px; position: relative; text-align: center; }
 form input { padding-left: 20px; width: 220px; height: 50px; display: block; margin: auto auto 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 18px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background: #efefef; border: 2px solid #e5e5e5; }
@@ -169,6 +165,10 @@ header .header_in .watch, .bottom .header_in .watch { position: relative; backgr
 header .header_in .watch:after, .bottom .header_in .watch:after { content: " "; display: table; clear: both; }
 header .header_in .header__left, .bottom .header_in .header__left { position: relative; float: left; z-index: 1; *zoom: 1; margin-top: 20px; }
 header .header_in .header__left:after, .bottom .header_in .header__left:after { content: " "; display: table; clear: both; }
+header .header_in .time_circles > div h4, .bottom .header_in .time_circles > div h4 { color: black; font-family: "conv_pfdintextcondpro-light"; font-size: 10px !important; line-height: 20px !important; position: relative; top: 18px; }
+header .header_in .time_circles > div > span, .bottom .header_in .time_circles > div > span { position: absolute; color: #000; font-family: "conv_pfdintextcondpro-medium"; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; width: 59px; height: 59px; line-height: 20px !important; background-color: #fbfbfb; -moz-box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.57); -webkit-box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.57); box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.57); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: 14px; top: -25px; left: 18px; }
+header .header_in .price, .bottom .header_in .price { font-family: "conv_pfdintextcondpro-light"; font-size: 48px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: 33px; color: white; position: absolute; width: 135px; height: 135px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmMzczNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2I2MDAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff3737), color-stop(100%, #b60000)); background-image: -moz-linear-gradient(top, #ff3737 0%, #b60000 100%); background-image: -webkit-linear-gradient(top, #ff3737 0%, #b60000 100%); background-image: linear-gradient(to bottom, #ff3737 0%, #b60000 100%); top: 323px; left: 605px; }
+header .header_in .price span, .bottom .header_in .price span { font-size: 24px; font-family: "als_rublregular"; }
 
 .scrollMenu { position: fixed; z-index: 999; width: 100%; top: 0; left: 0; bottom: auto; display: none; height: 60px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: rgba(40, 40, 40, 0.8); }
 .scrollMenu .top_in { padding-top: 20px; }

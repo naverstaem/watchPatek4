@@ -123,15 +123,18 @@ input, textarea
   text-align: center
   display: block
   margin: -5px auto 25px
+
   p
     color: #ffffff
-    margin-bottom: 5px
+    margin-bottom: -10px
     margin-top: 3px
     font-size: 14px
     position: static
     font-family: 'conv_pfdintextcondpro-light'
     &.counter__title
-      font-family: 'conv_segoeprintregular'
+      font-family: 'conv_pfdintextcondpro-light'
+      font-size: 24px
+
 
 
   ul
@@ -142,7 +145,7 @@ input, textarea
 
     li
       float: left
-      margin: 0 10px
+      margin: 0 4px
       text-align: center
       position: relative
 
@@ -165,81 +168,51 @@ input, textarea
 
 
 .form__out
-  width: 420px
-  +border-radius(8px)
-  +background-clip(padding-box)
-  border: solid 10px rgba(#bd3b63, .5)
-  +box
 
 .form
+  background: url(../img/form_bg.png) no-repeat center
+  height: 480px
   width: 400px
   //height: 510px
   position: relative
   +box
-  padding-bottom: 0
-  margin: 10px
 
   .caption
     box-sizing: border-box
-    padding-top: 25px
+    padding-top: 20px
     text-align: center
-    background: url(../img/form-caption_bg.png) no-repeat
-    width: 380px
-    height: 130px
+    background: none
+    width: 400px
+    height: 120px
     h3
       margin-top: 0
       margin-bottom: 0
-      font-size: 24px
+      font-size: 36px
       font-weight: normal
       text-align: center
-      font-family: 'Conv_PFDinTextCondPro-Light'
+      font-family: 'Conv_PFDinTextCondPro-regular'
       color: #ffffff
-      text-transform: none
+      text-transform: uppercase
       line-height: 1em
     h4
       margin-top: 5px
-      margin-bottom: 28px
-      font-size: 60px
+      margin-bottom: 0
+      font-size: 36px
       text-align: center
       font-weight: normal
-      text-transform: uppercase
-      font-family: 'bebas_neuebold'
+      text-transform: none
+      font-family: 'conv_pfdintextcondpro-light'
       color: #ffffff
       line-height: 1em
+      span
+        font-family: 'conv_pfdintextcondpro-regular'
 
 
 .frm
   //height: 305px
-  background: #ffffff
+  background: none
   position: relative
   height: 430px
-  .form-price
-    font-family: 'bebas_neuebook'
-    font-size: 48px
-    text-align: center
-    position: relative
-    padding-top: 10px
-    &:before
-      position: absolute
-      content: ""
-      width: 80px
-      height: 0px
-      border-bottom: 2px solid #e5e5e5
-      top: 44px
-      left: 42px
-    &:after
-      position: absolute
-      content: ""
-      width: 80px
-      height: 0px
-      border-bottom: 2px solid #e5e5e5
-      top: 44px
-      right: 42px
-
-    span
-      font-size: 24px
-      font-family: 'als_rublregular'
-
 
 
 
