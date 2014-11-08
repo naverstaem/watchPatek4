@@ -253,7 +253,7 @@ header .header_in .price span, .bottom .header_in .price span { font-size: 24px;
 .our__girl { position: absolute; bottom: -97px; left: -50px; }
 .our__girl img { display: block; }
 
-.reviews { *zoom: 1; padding-bottom: 60px; padding-top: 40px; }
+.reviews { *zoom: 1; padding-bottom: 45px; padding-top: 40px; }
 .reviews:after { content: " "; display: table; clear: both; }
 .reviews h2 { margin-bottom: 35px; text-align: center; }
 .reviews .reviews_in { *zoom: 1; }
@@ -278,16 +278,12 @@ header .header_in .price span, .bottom .header_in .price span { font-size: 24px;
 .reviews .review__item .review__audio:hover { text-decoration: none; }
 .reviews .review__item .review__audio i { display: inline-block; vertical-align: middle; left: -10px; position: relative; background: url('../img/icons-seb1018c39c.png') 0 -254px no-repeat; width: 41px; height: 40px; }
 
-.bottom { padding-top: 35px; }
+.bottom { padding-top: 70px; height: 870px; }
 .bottom .header_in--bottom { margin-top: 0px !important; }
 
-.questions { text-align: center; padding: 40px 0; }
-.questions .button--questions { display: inline-block; text-align: center; font-family: "Conv_PFDinTextCondPro-Light"; font-weight: normal; font-style: normal; font-size: 24px; text-decoration: underline; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; border: solid 2px #fadc28; padding: 17px 61px; color: #1e1e1e; margin-top: 15px; }
-.questions .button--questions:hover { text-decoration: none; }
-
-footer { box-sizing: border-box; background: url(../img/footer_bg.jpg) center center no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; height: 100px; text-align: center; padding-top: 16px; }
+footer { box-sizing: border-box; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; height: 100px; text-align: center; padding-top: 16px; }
 footer p { font-size: 16px; color: #787878; }
-footer p a { color: #963269; }
+footer p a { color: #ae2e6b; }
 footer p a:hover { text-decoration: none; }
 
 .timer .time_circles > div h4 { color: black; font-family: "conv_pfdintextcondpro-light"; font-size: 10px !important; line-height: 20px !important; position: relative; top: 18px; }
