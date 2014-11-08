@@ -226,7 +226,7 @@ header
     width: 297px
     margin-right: 45px
     text-align: center
-
+    +clr
     img
       width: 297px
       height: 512px
@@ -260,6 +260,44 @@ header
       color: #000
       content: ""
       font-family: 'conv_pfdintextcondpro-bold'
+  &__gallery
+    padding-top: 20px
+    clear: both
+    padding-bottom: 30px
+    +clr
+    .specs__img
+      display: inline-block
+      width: 320px
+      height: 180px
+      position: relative
+      vertical-align: top
+      margin-right: 15px
+      &:last-child
+        margin-right: 0
+      img
+        display: block
+        width: 100%
+      span
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        +opacity(0)
+        background: rgba(#000, .8)
+        z-index: 1
+        +transition(background, .5s)
+        &:after
+          content: ""
+          position: absolute
+          top: 50%
+          left: 50%
+          +transform(translate(-50%,-50%))
+          +s(zoom)
+        &:hover
+          +opacity(1)
+
+
 
 
 .our
