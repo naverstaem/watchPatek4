@@ -161,184 +161,19 @@ header
     height: 0
 
 
-.charact
-  +clr
-  background: url(../img/charact_bg.jpg) center center no-repeat
-  +background-size(cover)
-  height: 860px
-  padding-top: 80px
-  +box
-  h2
-    margin-bottom: 30px
-  .charact_in
-    @extend %in
-    position: relative
-    +clr
-  .charact__left
-    position: relative
-    float: left
-    .hit--charact
-      top: 180px
-      .hit-inner--charact
-        padding-top: 60px
-  .charact__right
-    float: right
-    width: 420px
-    .charact__items
-      background: white
-      padding: 30px 40px
-      +box
-      +border-radius(8px)
-      li
-        position: relative
-        margin-left: 60px
-        +pfl
-        font-size: 24px
-        line-height: 2.5em
-        &:before
-          position: absolute
-          content: ""
-          +s(check2)
-          top: 10px
-          left: -60px
-    .form-price
-      font-family: 'bebas_neuebook'
-      font-size: 48px
-      text-align: center
-      position: relative
-      padding-top: 10px
-      &:before
-        position: absolute
-        content: ""
-        width: 80px
-        height: 0px
-        border-bottom: 2px solid #ffffff
-        top: 44px
-        left: 62px
-      &:after
-        position: absolute
-        content: ""
-        width: 80px
-        height: 0px
-        border-bottom: 2px solid #ffffff
-        top: 44px
-        right: 62px
-
-      span
-        font-size: 24px
-        font-family: 'als_rublregular'
-    .charact__bottom
-      margin-top: 10px
-      .charact__remain
-        display: inline-block
-        text-align: center
-        vertical-align: middle
-        p
-          margin-bottom: 3px
-        span
-          display: inline-block
-          position: relative
-          background: none
-          +text-shadow(1px 1px 1px rgb(0, 0, 0))
-          font-size: 48px
-          width: 60px
-          height: 70px
-          +border-radius(4px)
-          +box
-          padding-top: 2px
-          padding-right: 2px
-          font-family: 'bebas_neuebook'
-          color: #ffffff
-          +box-shadow(inset 0 -2px 0 rgba(0,0,0,.8))
-          +background-image(linear-gradient(to bottom, #595959 0%, #b3b3b3 40%, #131313 65.01%, #595959 100%))
-          margin: 0 3px
-          &:after
-            height: 4px
-            width: 100%
-            position: absolute
-            content: ""
-            top: 33px
-            left: 0
-            +background-image(linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(#000,0.5) 100%))
-
-      .charact__buy
-        display: inline-block
-        vertical-align: middle
-        margin-left: 30px
-
-
-
-
 
 .specs
-  padding-top: 45px
+  padding-top: 40px
   +clr
-  +box
   h2
-    margin-bottom: 50px
-    font-size: 60px
-    font-family: 'code_pro_lightregular'
-    font-weight: normal
-    text-align: center
+    margin-bottom: 80px
+
   .specs_in
     @extend %in
-    width: 960px
     +clr
-  &__top
-    +border-radius(12px 12px 0)
-    +background-clip(padding-box)
-    +background-image(linear-gradient(to bottom, #efefef 0%, #dbdbdb 100%))
-    position: relative
-    padding: 35px
-    &:after
-      content: ""
-      position: absolute
-      background: url(../img/shadow.png) no-repeat center
-      width: 800px
-      height: 20px
-      bottom: -20px
-      left: 50%
-      +transform(translateX(-50%))
-    p
-      margin-bottom: 25px
-      width: 510px
-      &:last-of-type
-        margin-bottom: 0
-    .specs__watch
-      position: absolute
-      bottom: 0
-      right: 10px
-      img
-        display: block
-    .specs__video
-      position: absolute
-      bottom: 0
-      right: 0
-      +border-radius(8px 0 0 0)
-      +background-clip(padding-box)
-      +box-shadow(inset 0 -4px 0 rgba(200,180,70,.6))
-      +background-image(linear-gradient(to bottom, #ffef00 0%, #ffdb4f 100%))
-      font-size: 24px
-      color: #281e1e
-      text-decoration: underline
-      width: 280px
-      height: 70px
-      padding-left: 40px
-      +box
-
-      i
-        display: inline-block
-        position: relative
-        top: 16px
-        left: -20px
-        +s(play)
-      &:hover
-        text-decoration: none
 
   &__items-wrapper
     float: left
-    margin-left: 35px
-    margin-top: -9px
     +clr
   &__items
     float: left
@@ -347,7 +182,7 @@ header
     +box
     +clr
     &.short
-      margin-right: 100px
+      margin-right: 60px
       .specs__item
         &.title
           margin-bottom: 28px
@@ -356,60 +191,75 @@ header
 
 
   &__item
-    color: #5a5a5a
+    color: #181818
     margin-top: 24px
     font-family: 'conv_pfdintextcondpro-light'
     font-size: 16px
+    text-decoration: none
     &:first-child
       margin-top: 0
-    &.title
-      font-family: 'gotham_proregular'
-      color: #8c0a0a
-      font-size: 18px
 
-    span
-      color: #1e1e1e
+
+    .specs__button
+      padding: 18px 70px
+      margin-top: 15px
+
+
+
+    > span
+      color: #181818
       font-size: 18px
       text-transform: none
+      text-decoration: underline
+      &.price
+        font-size: 24px
+        text-decoration: none
+        + span
+          font-size: 14px
 
-  &__bottom
-    margin-top: 40px
-  &__images
-    margin-top: -20px
+
+
+  &__watch
+    margin-top: -60px
     position: relative
-    float: left
-    width: 440px
-    .photo__item
-      width: 210px
-      height: 190px
-      margin-top: 15px
+    float: right
+    width: 297px
+    margin-right: 45px
+    text-align: center
+
+    img
+      width: 297px
+      height: 512px
       position: relative
-      display: inline-block
-      +border-radius(6px)
-      &:nth-child(2n+2)
-        margin-left: 15px
-      img
-        display: block
-        +border-radius(6px)
-      span
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        +opacity(0)
-        z-index: 1
-        +border-radius(6px)
-        background: rgba(#fff, .6)
-        &:after
-          content: ""
-          position: absolute
-          +s(zoom)
-          top: 50%
-          left: 50%
-          +transform(translate(-50%,-50%))
-        &:hover
-          +opacity(1)
+      display: block
+    .prev
+      position: absolute
+      content: ""
+      +s(prev)
+      top: 42%
+      left: -45px
+      cursor: pointer
+
+    .next
+      position: absolute
+      content: ""
+      +s(next)
+      top: 42%
+      right: -45px
+      cursor: pointer
+
+    .threesixty
+      position: absolute
+      text-align: center
+      padding-top: 30px
+      +box
+      top: 18px
+      left: -65px
+      +s(360)
+      font-size: 30px
+      color: #000
+      content: ""
+      font-family: 'conv_pfdintextcondpro-bold'
 
 
 .our
