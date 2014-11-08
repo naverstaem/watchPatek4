@@ -122,11 +122,11 @@ input, textarea
   width: 285px
   text-align: center
   display: block
-  margin: -5px auto 25px
+  margin: -5px auto 0px
 
   p
     color: #ffffff
-    margin-bottom: -10px
+    margin-bottom: -7px
     margin-top: 3px
     font-size: 14px
     position: static
@@ -212,7 +212,6 @@ input, textarea
   //height: 305px
   background: none
   position: relative
-  height: 430px
 
 
 
@@ -222,13 +221,12 @@ form
   text-align: center
   input
     padding-left: 20px
-    width: 220px
-    height: 50px
+    width: 250px
+    height: 40px
     display: block
-    margin: auto auto 10px
+    margin: auto auto 13px
     +box
     font-size: 18px
-    +border-radius(4px)
     +background-clip(padding-box)
     background: #efefef
     border: 2px solid #e5e5e5
@@ -288,26 +286,28 @@ form
   &:hover
     +box-shadow(inset 0 0 5px 2px #d2b978)
 // common blocks
-.button--yellow
+.button--red
   +border-radius(4px)
   +background-clip(padding-box)
-  color: #000
-  font-family: 'pf_highway_sans_probold'
-  font-size: 30px
+  color: #ffffff
+  font-family: 'conv_pfdintextcondpro-light'
+  font-size: 24px
+  text-transform: uppercase
   font-weight: normal
   display: inline-block
-  margin: 20px auto auto
+  margin: 0 auto auto
   text-decoration: none
-  padding: 17px 61px
-  +box-shadow(inset 0 -4px 0 rgba(200,180,70,.6))
-  +background-image(linear-gradient(to bottom, #ffef00 0%, #ffdb4f 100%))
+  padding: 26px 85px
+  background: #d70505
+  +box-shadow(inset 0 -5px 0 rgb(145,2,2))
+  +background-image(linear-gradient(to top, #b90301 0%, #ff3537 100%))
 
   &:hover
-    background: lighten(#ffef00, 10%)
+    background: lighten(#d70505, 10%)
     +box-shadow(0 0 0 0)
 
 .button--orange
-  @extend .button--yellow
+  @extend .button--red
   +box-shadow(inset 0 -4px 0 rgb(192,91,0))
   +background-image(linear-gradient(bottom, #db6d00 0%, #ffc73b 100%))
   color: white

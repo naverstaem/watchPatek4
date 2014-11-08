@@ -147,7 +147,7 @@ head.ready(function() {
     });
 
 
-
+//Time Diagramm=====================================================
     $(".timer").TimeCircles({
         bg_width: 1.05,
         text_size: 0.085,
@@ -158,7 +158,7 @@ head.ready(function() {
         Minutes: { color: "#2d2d2d", text: "Минут" },
         Seconds: { color: "#2d2d2d", text: "Секунд" }
     }});
-
+//===================================================================
 
 
     (function ($) {
