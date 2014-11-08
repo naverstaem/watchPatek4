@@ -1,0 +1,308 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+//body
+//  font-family: Arial, sans-serif
+//  font-size: 12px
+//  line-height: 1.4
+=pfl
+  font-family: "Conv_PFDinTextCondPro-Light"
+  font-weight: normal
+  font-style: normal
+
+input.error, textarea.error
+  box-shadow: inset 0 0 10px red !important
+label.error
+  display: none !important
+
+
+.icon
+  display: inline-block
+  position: relative
+
+body
+  font-size: 16px
+  line-height: 1.4
+  background: #fff
+  color: #1e1e1e
+  +pfl
+.out
+  position: relative
+input, textarea
+  +placeholder
+    font-size: 16px
+    text-transform: none
+    color: #5a5a5a
+    +pfl
+%in
+  max-width: 1200px
+  width: 1000px
+  margin-left: auto
+  margin-right: auto
+
+.myFancyClose
+  position: absolute
+  top: -17px
+  right: -18px
+
+.btn
+  display: inline-block
+  +border-radius(16px)
+  +background-clip(padding-box)
+  padding: 8px 25px
+  color: #504b41
+  font-size: 18px
+  border: solid 2px #ffffff
+  text-decoration: underline
+  +transition(background, .5s)
+  &:hover
+    color: #504b41
+    background-color: lighten(white, 10%)
+.title
+  font-size: 36px
+  font-family: 'conv_pfdintextcondpro-medium'
+  line-height: 1.2em
+  color: #000
+  text-transform: uppercase
+  font-weight: normal
+  position: relative
+  text-align: center
+  span
+    font-family: 'conv_pfdintextcondpro-light'
+
+
+.counter
+  width: 285px
+  text-align: center
+  display: block
+  margin: -5px auto 0px
+
+  p
+    color: #ffffff
+    margin-bottom: -7px
+    margin-top: 3px
+    font-size: 14px
+    position: static
+    font-family: 'conv_pfdintextcondpro-light'
+    &.counter__title
+      font-family: 'conv_pfdintextcondpro-light'
+      font-size: 24px
+
+
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+
+    li
+      float: left
+      margin: 0 4px
+      text-align: center
+      position: relative
+
+      span
+        position: relative
+        background: none
+        +text-shadow(1px 1px 1px rgb(0, 0, 0))
+        display: block
+        font-size: 36px
+        width: 50px
+        height: 60px
+        border: solid 2px #ffffff
+        +border-radius(4px)
+        +box
+        padding-top: 3px
+        padding-right: 2px
+        font-family: 'conv_pfdintextcondpro-thin'
+        color: #ffffff
+
+
+
+.form__out
+
+.form
+  background: url(../img/form_bg.png) no-repeat center
+  height: 480px
+  width: 400px
+  //height: 510px
+  position: relative
+  +box
+
+  .caption
+    box-sizing: border-box
+    padding-top: 20px
+    text-align: center
+    background: none
+    width: 400px
+    height: 120px
+    h3
+      margin-top: 0
+      margin-bottom: 0
+      font-size: 36px
+      font-weight: normal
+      text-align: center
+      font-family: 'Conv_PFDinTextCondPro-regular'
+      color: #ffffff
+      text-transform: uppercase
+      line-height: 1em
+    h4
+      margin-top: 5px
+      margin-bottom: 0
+      font-size: 36px
+      text-align: center
+      font-weight: normal
+      text-transform: none
+      font-family: 'conv_pfdintextcondpro-light'
+      color: #ffffff
+      line-height: 1em
+      span
+        font-family: 'conv_pfdintextcondpro-regular'
+
+
+.frm
+  //height: 305px
+  background: none
+  position: relative
+
+
+
+form
+  margin-top: 10px
+  position: relative
+  text-align: center
+  input
+    padding-left: 20px
+    width: 250px
+    height: 40px
+    display: block
+    margin: auto auto 13px
+    +box
+    font-size: 18px
+    +background-clip(padding-box)
+    background: #efefef
+    border: 2px solid #e5e5e5
+
+
+
+
+.form__bottom
+  text-align: center
+  font-family: 'conv_pfdintextcondpro-light'
+  font-size: 16px
+  color: #3c3c3c
+  margin-top: 8px
+  line-height: 1.2em
+  span
+    font-family: 'conv_pfdintextcondpro-regular'
+    font-size: 24px
+
+.button
+  +box
+  width: 240px
+  height: 70px
+  color: #ffffff
+  +single-text-shadow
+  display: block
+  margin: 20px auto auto
+  font-family: 'pf_highway_sans_probold'
+  font-size: 30px
+  text-transform: none
+  text-decoration: none
+  +border-radius(4px)
+  +background-clip(padding-box)
+  border: solid 2px #ffffff
+  background: none
+  letter-spacing: 1px
+
+  &:hover
+    +box-shadow(inset 0 0 5px 2px #ffffff)
+// common blocks
+
+
+.button
+  +box
+  background: transparent
+  width: 260px
+  height: 90px
+  color: #d2b978
+  +single-text-shadow
+  display: block
+  margin: 20px auto auto
+  font-family: 'code_pro_lcregular'
+  font-size: 24px
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: 1px
+
+  &:hover
+    +box-shadow(inset 0 0 5px 2px #d2b978)
+// common blocks
+.button--red
+  +border-radius(4px)
+  +background-clip(padding-box)
+  color: #ffffff
+  font-family: 'conv_pfdintextcondpro-light'
+  font-size: 24px
+  text-transform: uppercase
+  font-weight: normal
+  display: inline-block
+  margin: 0 auto auto
+  text-decoration: none
+  padding: 26px 85px
+  background: #d70505
+  +box-shadow(inset 0 -5px 0 rgb(145,2,2))
+  +background-image(linear-gradient(to top, #b90301 0%, #ff3537 100%))
+
+  &:hover
+    background: lighten(#d70505, 10%)
+    +box-shadow(0 0 0 0)
+
